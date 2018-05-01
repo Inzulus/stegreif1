@@ -32,7 +32,24 @@ public class Burger {
 		}
 		
 	}
+	public String getZutaten() {
+		String zutatenString = "";
+		
+		if(anzahlZutaten == 0) {
+			return "keine Zutaten!";
+		}
+		
+			
+		for(int i = 0;i< anzahlZutaten;i++) {
+			zutatenString += zutaten[i].toString();
+		}
+		return zutatenString;
+	}
 	
+	
+	public String getName() {
+		return name;
+	}
 	
 	public int getHoehe() {
 		return hoehe;

@@ -22,6 +22,7 @@ public class Bestellung {
 		System.out.println("Ihre Bestellung bitte");
 		System.out.println("(1) Neuer Burger");
 		System.out.println("(2) Zutat zu aktuellem Burger hinzufügen");
+		System.out.println("(3) aktuelle Burger ausgeben");
 		System.out.println("(9) Bestelluing abschließen");
 		
 		String einlesen = StaticScanner.nextString();
@@ -45,6 +46,13 @@ public class Bestellung {
 				int zutatenNummer = StaticScanner.nextInt();
 				Zutat aktuelleZutat = alleZutaten[zutatenNummer];
 				warenkorb[aktuellerBurger].zutatHinzufuegen(aktuelleZutat);
+				System.out.println("Sie haben folgende Zutat hinzugefügt: ");
+				System.out.println(aktuelleZutat.toString());
+				break;
+			case "3":
+				System.out.println("Name des Burgers: "+warenkorb[aktuellerBurger].getName());
+				System.out.println("Alle Zutaten: ");
+				System.out.println(warenkorb[aktuellerBurger].getZutaten());
 				
 				
 				
@@ -52,6 +60,7 @@ public class Bestellung {
 			
 			System.out.println("Nächste Aktion:");
 			einlesen = StaticScanner.nextString();
+			
 		}
 		
 
