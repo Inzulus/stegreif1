@@ -22,7 +22,7 @@ public class Bestellung {
 		System.out.println("Ihre Bestellung bitte");
 		System.out.println("(1) Neuer Burger");
 		System.out.println("(2) Zutat zu aktuellem Burger hinzufügen");
-		System.out.println("(9) Bestelluing abschließen)");
+		System.out.println("(9) Bestelluing abschließen");
 		
 		String einlesen = StaticScanner.nextString();
 		
