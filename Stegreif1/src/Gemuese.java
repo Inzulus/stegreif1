@@ -4,17 +4,18 @@ public class Gemuese extends Zutat{
 	private int scheibenAnzahl;
 	private int scheibenDicke;
 	
-	public Gemuese(int nummer, String name, float preis, boolean klassisch) {
-		this.nummer = nummer;
-		this.name = name;
-		this.preis = preis;
-		this.klassisch = klassisch;
-		this.vegan = true;
+	public Gemuese(int nummer, String name, float preis, boolean klassisch, boolean vegan, boolean vegetarisch, 
+					int scheibenAnzahl, int scheibenDicke) {
+		super(nummer, name, preis, klassisch, vegan, vegetarisch);
+		this.scheibenAnzahl = scheibenAnzahl;
+		this.scheibenDicke = scheibenDicke;
 	}
 
 	@Override
 	public int zubereiten() {
-		return scheibenAnzahl;
+		System.out.println(name+" wird gewaschen");
+		System.out.println(scheibenAnzahl+" Scheibe/Scheiben wird/werden in der Dicke von "+scheibenDicke+" mm geschnitten ");
+		return scheibenAnzahl;//Dauer in Sekunden, da 1 Sekunde/Scheibe
 	}
 
 	@Override

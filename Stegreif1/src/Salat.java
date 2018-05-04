@@ -2,16 +2,14 @@
 public class Salat extends Zutat{
 	
 	
-	public Salat(int nummer, String name, float preis, boolean klassisch) {
-		this.nummer = nummer;
-		this.name = name;
-		this.preis = preis;
-		this.klassisch = klassisch;
-		this.vegan = true;
+	public Salat(int nummer, String name, float preis, boolean klassisch, boolean vegan, boolean vegetarisch) {
+		super(nummer, name, preis, klassisch, vegan, vegetarisch);
+		
 	}
 
 	@Override
 	public int zubereiten() {
+		System.out.println(name+" wird gewaschen");
 		return 0;
 	}
 
