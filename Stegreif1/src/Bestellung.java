@@ -6,6 +6,7 @@ public class Bestellung {
 	public static int anzahlBurger = 0;
 	public static int aktuellerBurger = 0;
 	private static boolean quit = false;
+	private static boolean hatBroetchen = false;
 	
 
 	public static void main(String[] args) {
@@ -26,7 +27,7 @@ public class Bestellung {
 		alleZutaten[40] = new Gemuese(40,"Tomate",0.25f,true,true,true,3,3);
 		alleZutaten[41] = new Gemuese(41,"Gurke",0.15f,true,true,true,4,2);
 		alleZutaten[42] = new Gemuese(42,"Rote Zwiebelringe",0.08f,false,true,true,5,2);
-		alleZutaten[43] = new Gemuese(40,"Jalapeno",0.08f,false,true,true,5,2);
+		alleZutaten[43] = new Gemuese(43,"Jalapeno",0.08f,false,true,true,5,2);
 		
 		alleZutaten[50] = new Sauce(50,"Ketchup",0.10f,true,true,true,5,"normal");
 		alleZutaten[51] = new Sauce(51,"Sandwichsauce",0.15f,true,false,true,10,"normal");
@@ -71,22 +72,37 @@ public class Bestellung {
 			case "2":
 				System.out.println("Welche Zutat möchten sie hinzufügen: ");
 				int zutatenNummer = StaticScanner.nextInt();
+				if(alleZutaten[zutatenNummer] != null) {
+					
 				Zutat aktuelleZutat = alleZutaten[zutatenNummer];
-				warenkorb[aktuellerBurger].zutatHinzufuegen(aktuelleZutat);
-				System.out.println("Sie haben folgende Zutat hinzugefügt: ");
-				System.out.println(aktuelleZutat.toString());
+				if(!(aktuelleZutat instanceof Broetchen) || aktuelleZutat instanceof Broetchen && hatBroetchen == false) {
+				
+					warenkorb[aktuellerBurger].zutatHinzufuegen(aktuelleZutat);
+					System.out.println("Sie haben folgende Zutat hinzugefügt: ");
+					System.out.println(aktuelleZutat.toString());
+					
+					if(aktuelleZutat instanceof Broetchen) {
+						hatBroetchen = true;
+					}
+
+					break;	
+				}
+					System.out.println("Jeder Burger kann nur ein Brötchen besitzen!!!");
+					break;
+				}
 				break;
 			case "3":
 				System.out.println("Name des Burgers: "+warenkorb[aktuellerBurger].getName());
 				System.out.println("Alle Zutaten: ");
 				System.out.println(warenkorb[aktuellerBurger].getZutaten());
-				
+				break;
 				
 				
 			}
-			
-			System.out.println("Nächste Aktion:");
+			if(!quit) {
+			System.out.println("\nNächste Aktion:");
 			einlesen = StaticScanner.nextString();
+			}
 			
 		}
 		
@@ -95,9 +111,15 @@ public class Bestellung {
 	}
 	
 	public static void burgerAusgabe(Burger[] warenkorb) {
-		for(int i = 0; i<warenkorb.length;i++) {
+		float preis=0;
+		int zeit = 0;
+		for(int i = 0; i<anzahlBurger;i++) {
 			System.out.println(warenkorb[i].toString());
+			preis +=warenkorb[i].berechnePreis();
+			//zeit +=warenkorb[i].gesamteZeit();
 		}
+
+		System.out.println("Gesamtpreis: "+preis+" €"+"  Gesamte Zeit: "+zeit+" Sekunden");
 		
 	}
 
