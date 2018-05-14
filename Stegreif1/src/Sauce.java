@@ -1,4 +1,8 @@
 
+/**
+ * @author Julius Mueller & Lidiaa 
+ *
+ */
 public class Sauce extends Zutat{
 	
 	private int menge;

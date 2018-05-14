@@ -1,4 +1,8 @@
 
+/**
+ * @author Julius Mueller & Lidiaa 
+ *
+ */
 public class Bratling  extends Zutat{
 	
 	private int bratzeit;
@@ -17,6 +21,9 @@ public class Bratling  extends Zutat{
 		return bratzeit;
 	}
 
+	/** 
+	 * @return gibt die Höhe zurück abhängig von der Bratzeit
+	 */
 	@Override
 	public int berechneHoehe() {
 		return (int) ((hoehe/1.035)*(bratzeit/60));

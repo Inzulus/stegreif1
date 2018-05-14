@@ -1,4 +1,8 @@
 
+/**
+ * @author Julius Mueller & Lidiaa 
+ *
+ */
 public class Salat extends Zutat{
 	
 	

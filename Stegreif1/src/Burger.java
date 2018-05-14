@@ -1,3 +1,7 @@
+/**
+ * @author Julius Mueller & Lidiaa 
+ *
+ */
 public class Burger {
 
 	private String name;
@@ -15,6 +19,9 @@ public class Burger {
 		this.name = name;
 	}
 
+	/**
+	 * @return Die Zubereitungszeit aller Zutaten des Burgers
+	 */
 	public int zubereiten() {
 		int zeit = 0;
 		for (int i = 0; i < anzahlZutaten; i++) {
@@ -23,6 +30,9 @@ public class Burger {
 		return zeit;
 	}
 
+	/**
+	 * @param zutat Überprüft ob der Burger schon ein Brötchen hat und fügt die Zutaten ansonsten hinzu
+	 */
 	public void zutatHinzufuegen(Zutat zutat) {
 		if(!(zutat instanceof Broetchen) ||zutat instanceof Broetchen && !hatBroetchen)
 		{
@@ -38,6 +48,9 @@ public class Burger {
 		}
 	}
 
+	/**
+	 * @return Gibt die Daten des Burgers aus inklusive gesamterZeit
+	 */
 	public String toString() {
 		gesamteZeit = zubereiten();
 		
@@ -45,6 +58,9 @@ public class Burger {
 				+ "  Zubereitungszeit: " + gesamteZeit + " Sekunden" +"  "+ bestimmeZustand();
 	}
 
+	/**
+	 * @return Gibt zurück ob der Burger klassisch, vegetarisch oder vegan ist
+	 */
 	public String bestimmeZustand() {
 		String zustand = "";
 		for (int i = 0; i < anzahlZutaten; i++) {
@@ -76,6 +92,9 @@ public class Burger {
 
 	}
 
+	/**
+	 * @return berechnet die Höhe aller zutaten und addiert sie
+	 */
 	public int berechneHoehe() {
 		int hoehe = 0;
 		for (int i = 0; i < anzahlZutaten; i++) {
@@ -84,6 +103,9 @@ public class Burger {
 		return hoehe;
 	}
 
+	/**
+	 * @return gibt den gesamten Preis des Burgers zurück
+	 */
 	public float berechnePreis() {
 		float preis = 0;
 		for (int i = 0; i < anzahlZutaten; i++) {
@@ -97,6 +119,9 @@ public class Burger {
 		 return gesamteZeit;
 	}
 
+	/**
+	 * @return gibt alle Zutaten des aktuellen Burgers zurück
+	 */
 	public String getZutaten() {
 		String zutatenString = "";
 

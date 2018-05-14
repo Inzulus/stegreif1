@@ -1,4 +1,8 @@
 
+/**
+ * @author Julius Mueller & Lidiaa 
+ *
+ */
 public class Gemuese extends Zutat{
 	
 	private int scheibenAnzahl;

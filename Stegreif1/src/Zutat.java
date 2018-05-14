@@ -1,4 +1,8 @@
 
+/**
+ * @author Julius Mueller & Lidiaa 
+ *
+ */
 public abstract class Zutat {
 	
 	protected int nummer;
@@ -28,6 +32,9 @@ public abstract class Zutat {
 	
 	public abstract int berechneHoehe(); 
 	
+	/** 
+	 * @return gibt einen String mit den Eckdaten der Zutat zurück
+	 */
 	public String toString() {
 		String nummerNamePreis;
 		nummerNamePreis = "Nummer: "+nummer+" Name: "+name+" Preis: "+preis+" Klassisch: "+

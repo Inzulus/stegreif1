@@ -1,4 +1,8 @@
 
+/**
+ * @author Julius Mueller & Lidiaa 
+ *
+ */
 public class Bestellung {
 
 	public static Zutat[] alleZutaten = new Zutat[54];
@@ -32,13 +36,11 @@ public class Bestellung {
 		alleZutaten[52] = new Sauce(52, "Chillisauce", 0.25f, false, true, true, 8, "scharf");
 		alleZutaten[53] = new Sauce(53, "Honig-Senf-Sauce", 0.18f, false, false, true, 8, "süß");
 
-		// Broetchen brot1 = (Broetchen) alleZutaten[10];
-		// System.out.println(brot1.toString());
 		menueAusgabe(alleZutaten);
 		System.out.println("");
 		System.out.println("Willkommen bei In 'n Out ");
 		System.out.println("Ihre Bestellung bitte");
-		System.out.println("(0) Menü ausgeben");
+		System.out.println("(0) Menü & Zutaten ausgeben");
 		System.out.println("(1) Neuer Burger");
 		System.out.println("(2) Zutat zu aktuellem Burger hinzufügen");
 		System.out.println("(3) aktuelle Burger ausgeben");
@@ -55,6 +57,15 @@ public class Bestellung {
 
 			case "0":
 				menueAusgabe(alleZutaten);
+				System.out.println("");
+				System.out.println("Willkommen bei LeckerSchmecker ");
+				System.out.println("Ihre Bestellung bitte");
+				System.out.println("(0) Menü & Zutaten ausgeben");
+				System.out.println("(1) Neuer Burger");
+				System.out.println("(2) Zutat zu aktuellem Burger hinzufügen");
+				System.out.println("(3) aktuelle Burger ausgeben");
+				System.out.println("(9) Bestellung abschließen");
+				
 				break;
 
 			case "1":
