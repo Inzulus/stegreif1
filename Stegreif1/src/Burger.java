@@ -1,4 +1,3 @@
-
 public class Burger {
 
 	private String name;
@@ -9,6 +8,7 @@ public class Burger {
 	private boolean klassisch = true;
 	private boolean vegan = true;
 	private boolean vegetarisch = true;
+	int gesamteZeit = 0;
 
 	public Burger(String name) {
 		this.name = name;
@@ -28,10 +28,10 @@ public class Burger {
 	}
 
 	public String toString() {
-		double zeit = gesamteZeit();
-
-		return "Name: " + name + "  Höhe: " + berechneHoehe() + " mm" + "  Preis: " + berechnePreis() + " €"
-				+ "  Zubereitungszeit: " + zeit + " Sekunden" +"  "+ bestimmeZustand();
+		gesamteZeit = gesamteZeit();
+		
+		return "\nName: " + name + "  Höhe: " + berechneHoehe() + " mm" + "  Preis: " + berechnePreis() + " €"
+				+ "  Zubereitungszeit: " + gesamteZeit + " Sekunden" +"  "+ bestimmeZustand();
 	}
 
 	public String bestimmeZustand() {
@@ -80,6 +80,10 @@ public class Burger {
 		}
 		return preis;
 
+	}
+	
+	public int getGesamteZeit() {
+		 return gesamteZeit;
 	}
 
 	public String getZutaten() {

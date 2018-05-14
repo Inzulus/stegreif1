@@ -116,10 +116,10 @@ public class Bestellung {
 		for(int i = 0; i<anzahlBurger;i++) {
 			System.out.println(warenkorb[i].toString());
 			preis +=warenkorb[i].berechnePreis();
-			//zeit +=warenkorb[i].gesamteZeit();
+			zeit +=warenkorb[i].getGesamteZeit();
 		}
 
-		System.out.println("Gesamtpreis: "+preis+" €"+"  Gesamte Zeit: "+zeit+" Sekunden");
+		System.out.println("\nGesamtpreis: "+preis+" €"+"  Gesamte Zeit: "+zeit+" Sekunden");
 		
 	}
 
