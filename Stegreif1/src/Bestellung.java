@@ -53,7 +53,7 @@ public class Bestellung {
 			//Abschluss der Bestellung und Beendigung des Programms
 			case "9":
 				quit = true;
-				burgerAusgabe(warenkorb);
+				warenkorbZubereiten(warenkorb);
 				break;
 			//Menü und Zutate nochmal ausgeben
 			case "0":
@@ -112,19 +112,22 @@ public class Bestellung {
 
 	
 	/**
-	 * Ausgabe der Eckdaten aller Bruger inklusive Preis und Zuberteitungszeit
+	 * Ausgabe der Eckdaten aller Bruger inklusive zubereitung
 	 * @param warenkorb Array aller erstellen Burger
 	 */
-	public static void burgerAusgabe(Burger[] warenkorb) {
+	public static void warenkorbZubereiten(Burger[] warenkorb) {
 		float preis = 0;
 		int zeit = 0;
 		for (int i = 0; i < anzahlBurger; i++) {
+			warenkorb[i].zubereiten();
 			System.out.println(warenkorb[i].toString());
 			preis += warenkorb[i].berechnePreis();
 			zeit += warenkorb[i].getGesamteZeit();
 		}
 
 		System.out.println("\nGesamtpreis: " + preis + " €" + "  Gesamte Zeit: " + zeit + " Sekunden");
+		System.out.println("-------------------------------------------------------------------------");
+		System.out.println();
 
 	}
 

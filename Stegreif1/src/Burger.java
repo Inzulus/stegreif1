@@ -22,12 +22,12 @@ public class Burger {
 	/**
 	 * @return Die Zubereitungszeit aller Zutaten des Burgers
 	 */
-	public int zubereiten() {
+	public void zubereiten() {
 		int zeit = 0;
 		for (int i = 0; i < anzahlZutaten; i++) {
 			zeit += zutaten[i].zubereiten();
 		}
-		return zeit;
+		gesamteZeit =zeit;
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class Burger {
 	 * @return Gibt die Daten des Burgers aus inklusive gesamterZeit
 	 */
 	public String toString() {
-		gesamteZeit = zubereiten();
+		//gesamteZeit = zubereiten();
 		
 		return "\nName: " + name + "  Höhe: " + berechneHoehe() + " mm" + "  Preis: " + berechnePreis() + " €"
 				+ "  Zubereitungszeit: " + gesamteZeit + " Sekunden" +"  "+ bestimmeZustand();
