@@ -1,4 +1,3 @@
-
 /**
  * @author Julius Mueller & Lidiaa 
  *
@@ -47,14 +46,16 @@ public class Bestellung {
 		System.out.println("(9) Bestellung abschließen");
 		String einlesen = StaticScanner.nextString();
 
+		//while-Schleife mit eigentlichem Programmablauf
 		while (!quit) {
-
+			//Switch-Case zur Behandlung der einzelnen Eingaben
 			switch (einlesen) {
+			//Abschluss der Bestellung und Beendigung des Programms
 			case "9":
 				quit = true;
 				burgerAusgabe(warenkorb);
 				break;
-
+			//Menü und Zutate nochmal ausgeben
 			case "0":
 				menueAusgabe(alleZutaten);
 				System.out.println("");
@@ -67,7 +68,7 @@ public class Bestellung {
 				System.out.println("(9) Bestellung abschließen");
 				
 				break;
-
+			//Hinzufügen eines neuen Burgers mit angabge des Namens
 			case "1":
 				System.out.println("Wie soll ihr neuer Burger heißen?");
 				String name = StaticScanner.nextString();
@@ -75,6 +76,7 @@ public class Bestellung {
 				aktuellerBurger = anzahlBurger;
 				anzahlBurger++;
 				break;
+			//Hinzufügen der Zutaten
 			case "2":
 				System.out.println("Welche Zutat möchten sie hinzufügen: ");
 				int zutatenNummer = StaticScanner.nextInt();
@@ -89,6 +91,8 @@ public class Bestellung {
 				}
 				System.out.println("Ungültige Zutat!");
 				break;
+				
+			//Ausgabe der Zutaten des aktuellen Burgers
 			case "3":
 				System.out.println("Name des Burgers: " + warenkorb[aktuellerBurger].getName());
 				System.out.println("Alle Zutaten: ");
@@ -96,6 +100,7 @@ public class Bestellung {
 				break;
 
 			}
+			//überprüfung ob das Programm schon beendet wurde um eine erneute Eingabe zu vermeiden
 			if (!quit) {
 				System.out.println("\nNächste Aktion:");
 				einlesen = StaticScanner.nextString();
@@ -105,6 +110,11 @@ public class Bestellung {
 
 	}
 
+	
+	/**
+	 * Ausgabe der Eckdaten aller Bruger inklusive Preis und Zuberteitungszeit
+	 * @param warenkorb Array aller erstellen Burger
+	 */
 	public static void burgerAusgabe(Burger[] warenkorb) {
 		float preis = 0;
 		int zeit = 0;
@@ -118,6 +128,9 @@ public class Bestellung {
 
 	}
 
+	/** Gibt alle verfügbaren Zutaten aus
+	 * @param alleZutaten Array mit allen Zutaten des Burgerladens
+	 */
 	public static void menueAusgabe(Zutat[] alleZutaten) {
 		for (int i = 0; i < alleZutaten.length; i++) {
 			if (i % 10 == 0) {
