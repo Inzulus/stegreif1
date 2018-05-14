@@ -8,13 +8,14 @@ public class Burger {
 	private boolean klassisch = true;
 	private boolean vegan = true;
 	private boolean vegetarisch = true;
-	int gesamteZeit = 0;
+	private int gesamteZeit = 0;
+	private static boolean hatBroetchen = false;
 
 	public Burger(String name) {
 		this.name = name;
 	}
 
-	public int gesamteZeit() {
+	public int zubereiten() {
 		int zeit = 0;
 		for (int i = 0; i < anzahlZutaten; i++) {
 			zeit += zutaten[i].zubereiten();
@@ -23,12 +24,22 @@ public class Burger {
 	}
 
 	public void zutatHinzufuegen(Zutat zutat) {
-		zutaten[anzahlZutaten] = zutat;
-		anzahlZutaten++;
+		if(!(zutat instanceof Broetchen) ||zutat instanceof Broetchen && !hatBroetchen)
+		{
+			zutaten[anzahlZutaten] = zutat;
+			anzahlZutaten++;
+			if(zutat instanceof Broetchen)
+				hatBroetchen = true;
+			
+		}
+		else {
+			System.out.println("Dieser Burger besitzt schon ein Brötchen!!!");
+			
+		}
 	}
 
 	public String toString() {
-		gesamteZeit = gesamteZeit();
+		gesamteZeit = zubereiten();
 		
 		return "\nName: " + name + "  Höhe: " + berechneHoehe() + " mm" + "  Preis: " + berechnePreis() + " €"
 				+ "  Zubereitungszeit: " + gesamteZeit + " Sekunden" +"  "+ bestimmeZustand();
