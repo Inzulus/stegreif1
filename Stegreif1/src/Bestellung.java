@@ -1,7 +1,7 @@
 /**
  * 
  * In dieser Klasse ist die main und es wird der eigentlich Bestllvorgang ausgeführt inklusive Liste aller Zutaten
- * @author Julius Mueller & Lidiia Ananchenko
+ * @author Julius Mueller and Lidiia Ananchenko
  *
  */
 public class Bestellung {

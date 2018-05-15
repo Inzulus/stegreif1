@@ -1,7 +1,7 @@
 
 /**
  * In dieser Klasse wird das Gemuese definiert
- * @author Julius Mueller & Lidiia Ananchenko
+ * @author Julius Mueller and Lidiia Ananchenko
  *
  */
 public class Gemuese extends Zutat{

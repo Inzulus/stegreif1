@@ -1,6 +1,6 @@
 /**
  * In dieser Klasse sind die Burger mit ihren Eckdaten defeniert
- * @author Julius Mueller & Lidiia Ananchenko
+ * @author Julius Mueller and Lidiia Ananchenko
  *
  */
 public class Burger {

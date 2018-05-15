@@ -1,7 +1,7 @@
 
 /**
  * In dieser Klasse werden die Brötchen definiert
- * @author Julius Mueller & Lidiia Ananchenko
+ * @author Julius Mueller and Lidiia Ananchenko
  *
  */
 public class Broetchen extends Zutat{
