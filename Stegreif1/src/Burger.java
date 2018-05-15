@@ -32,7 +32,8 @@ public class Burger {
 	}
 
 	/**
-	 * @param zutat Überprüft ob der Burger schon ein Brötchen hat und fügt die Zutaten ansonsten hinzu
+	 * Überprüft ob der Burger schon ein Brötchen hat und fügt die Zutaten ansonsten hinzu
+	 * @param zutat Die Zutat die hinzugefügt wird
 	 */
 	public void zutatHinzufuegen(Zutat zutat) {
 		if(!(zutat instanceof Broetchen) ||zutat instanceof Broetchen && !hatBroetchen)
@@ -49,8 +50,8 @@ public class Burger {
 		}
 	}
 
-	/**
-	 * @return Gibt die Daten des Burgers aus inklusive gesamterZeit
+	/**Gibt die Daten des Burgers aus inklusive gesamterZeit
+	 * @return den String des Burgers
 	 */
 	public String toString() {
 		//gesamteZeit = zubereiten();
@@ -59,7 +60,7 @@ public class Burger {
 				+ "  Zubereitungszeit: " + gesamteZeit + " Sekunden" +"  "+ bestimmeZustand();
 	}
 
-	/**
+	/**Bestimmt ofb der Bruger vegetarisch, vegan oder klasssisch ist
 	 * @return Gibt zurück ob der Burger klassisch, vegetarisch oder vegan ist
 	 */
 	public String bestimmeZustand() {
@@ -94,6 +95,7 @@ public class Burger {
 	}
 
 	/**
+	 * Berechnet die Höhe des Burgers
 	 * @return berechnet die Höhe aller zutaten und addiert sie
 	 */
 	public int berechneHoehe() {
