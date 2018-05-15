@@ -1,1 +1,1 @@
-typeSearchIndex = [{"p":"<Unnamed>","l":"Gemuese"}]
+typeSearchIndex = [{"p":"<Unnamed>","l":"Bestellung"},{"p":"<Unnamed>","l":"Bratling"},{"p":"<Unnamed>","l":"Broetchen"},{"p":"<Unnamed>","l":"Burger"},{"p":"<Unnamed>","l":"Gemuese"},{"p":"<Unnamed>","l":"Salat"},{"p":"<Unnamed>","l":"Sauce"},{"p":"<Unnamed>","l":"Zutat"}]

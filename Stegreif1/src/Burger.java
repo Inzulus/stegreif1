@@ -21,7 +21,7 @@ public class Burger {
 	}
 
 	/**
-	 * @return Die Zubereitungszeit aller Zutaten des Burgers
+	 * Bereitet alle Burger zu und berechnet die Gesamt Zeit
 	 */
 	public void zubereiten() {
 		int zeit = 0;
