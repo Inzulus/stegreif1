@@ -57,7 +57,8 @@ public class Burger {
 		//gesamteZeit = zubereiten();
 		
 		return "\nName: " + name + "  Höhe: " + berechneHoehe() + " mm" + "  Preis: " + berechnePreis() + " €"
-				+ "  Zubereitungszeit: " + gesamteZeit + " Sekunden" +"  "+ bestimmeZustand();
+				+ "  Zubereitungszeit: " + gesamteZeit + " Sekunden" +"  "+ bestimmeZustand()+
+				"\n----------------------------------------------------------------------------"+"\n";
 	}
 
 	/**Bestimmt ofb der Bruger vegetarisch, vegan oder klasssisch ist
