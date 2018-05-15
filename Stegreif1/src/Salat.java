@@ -1,6 +1,7 @@
 
 /**
- * @author Julius Mueller & Lidiaa 
+ * In dieser Klasse ist der Salat definiert
+ * @author Julius Mueller & Lidiia Ananchenko
  *
  */
 public class Salat extends Zutat{

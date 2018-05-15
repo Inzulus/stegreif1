@@ -1,6 +1,7 @@
 
 /**
- * @author Julius Mueller & Lidiaa 
+ * In dieser Klasse ist die Sauce definiert
+ * @author Julius Mueller & Lidiia Ananchenko
  *
  */
 public class Sauce extends Zutat{

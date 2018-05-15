@@ -1,6 +1,7 @@
 
 /**
- * @author Julius Mueller & Lidiaa 
+ * Dies ist die Zutaten Oberklasse in der der super Konstruktor definiert wurde
+ * @author Julius Mueller & Lidiia Ananchenko
  *
  */
 public abstract class Zutat {

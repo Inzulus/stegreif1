@@ -13,7 +13,7 @@ public class Burger {
 	private boolean vegan = true;
 	private boolean vegetarisch = true;
 	private int gesamteZeit = 0;
-	private static boolean hatBroetchen = false;
+	private boolean hatBroetchen = false;
 
 	public Burger(String name) {
 		this.name = name;

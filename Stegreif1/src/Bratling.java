@@ -1,6 +1,7 @@
 
 /**
- * @author Julius Mueller & Lidiaa 
+ * In dieser Klasse sind die Bratlinge definiert
+ * @author Julius Mueller & Lidiia Ananchenko
  *
  */
 public class Bratling  extends Zutat{

@@ -1,5 +1,7 @@
 /**
- * @author Julius Mueller & Lidiaa 
+ * 
+ * In dieser Klasse ist die main und es wird der eigentlich Bestllvorgang ausgeführt inklusive Liste aller Zutaten
+ * @author Julius Mueller & Lidiia Ananchenko
  *
  */
 public class Bestellung {
@@ -72,9 +74,11 @@ public class Bestellung {
 			case "1":
 				System.out.println("Wie soll ihr neuer Burger heißen?");
 				String name = StaticScanner.nextString();
-				warenkorb[anzahlBurger] = new Burger(name);
-				aktuellerBurger = anzahlBurger;
 				anzahlBurger++;
+				aktuellerBurger = anzahlBurger-1;
+				warenkorb[aktuellerBurger] = new Burger(name);
+				
+				
 				break;
 			//Hinzufügen der Zutaten
 			case "2":

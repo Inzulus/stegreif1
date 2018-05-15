@@ -1,6 +1,7 @@
 
 /**
- * @author Julius Mueller & Lidiaa 
+ * In dieser Klasse werden die Brötchen definiert
+ * @author Julius Mueller & Lidiia Ananchenko
  *
  */
 public class Broetchen extends Zutat{
@@ -29,7 +30,7 @@ public class Broetchen extends Zutat{
 	 */
 	@Override
 	public int berechneHoehe() {
-		return (int) (hoehe*1.02*(backzeit/60));
+		return (int) (hoehe*1.02*(backzeit/60.));
 	}
 
 	
